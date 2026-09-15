@@ -1,0 +1,3 @@
+# software-factory
+
+@AGENTS.md

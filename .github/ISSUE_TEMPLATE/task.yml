@@ -1,0 +1,24 @@
+name: Task
+description: A concrete unit of work under an epic
+title: ""
+labels: ["task"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Remember to add the epic's piece label (`ai-pipeline`, `discovery`,
+        `scaffolding`, `ci`, `iac`, or `deploy`) alongside `task` — issue
+        forms can't apply it automatically.
+  - type: input
+    id: epic
+    attributes:
+      label: Parent epic
+      description: Issue number of the epic this task belongs to (e.g. #12)
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: What needs to happen
+    validations:
+      required: true
