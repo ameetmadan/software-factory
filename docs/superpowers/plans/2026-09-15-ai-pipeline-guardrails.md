@@ -35,7 +35,7 @@
 
 - [ ] **Step 1: Write `AGENTS.md`**
 
-````markdown
+```markdown
 # Agent & Contributor Conventions
 
 This file is the single source of truth for how this repo is built and
@@ -144,7 +144,6 @@ without infrastructure; business rules independent of frameworks.
   "meta": { "timestamp": "..." }
 }
 ```
-````
 
 - Proper HTTP status codes; pagination on list endpoints; OpenAPI/GraphQL
   schema docs; clear validation error messages.
@@ -186,8 +185,7 @@ timeouts; monitor slow queries.
   include diagrams for system architecture.
 - PR descriptions explain _why_, including trade-offs, so the reasoning
   still makes sense years later.
-
-````
+```
 
 - [ ] **Step 2: Write `CLAUDE.md`**
 
@@ -195,7 +193,7 @@ timeouts; monitor slow queries.
 # software-factory
 
 @AGENTS.md
-````
+```
 
 - [ ] **Step 3: Write `.cursor/rules/agents.mdc`**
 
@@ -574,7 +572,7 @@ Expected: a run for the `CI` workflow appears and all three jobs (`commitlint`, 
 
 - [ ] **Step 1: Write `.claude/skills/roadmap/SKILL.md`**
 
-````markdown
+```markdown
 ---
 name: roadmap
 description: Create or update GitHub issues for software-factory roadmap items (epics) and concrete work (tasks). Use when starting new roadmap work, breaking an epic into tasks, or updating issue status.
@@ -606,7 +604,6 @@ gh issue create \
 EOF
 )"
 ```
-````
 
 ## Creating a task under an epic
 
@@ -635,8 +632,7 @@ epic's deliverable is verified working, not just implemented.
 gh issue list --label epic --state all
 gh issue list --label task --state open
 ```
-
-````
+```
 
 - [ ] **Step 2: Verify the skill files an issue**
 
@@ -647,7 +643,7 @@ Run: use the skill (or its documented `gh issue create` command directly) to fil
 ```bash
 git add .claude/skills/roadmap/SKILL.md
 git commit -m "feat: add roadmap skill for GitHub Issues tracking"
-````
+```
 
 ---
 
@@ -730,7 +726,7 @@ git commit -m "feat: add new-subproject skill to start the next factory piece"
 
 - [ ] **Step 1: Write `README.md`**
 
-````markdown
+```markdown
 # software-factory
 
 A template repo for jumpstarting new project ideas — covering the full
@@ -774,7 +770,6 @@ pre-commit install --hook-type pre-commit --hook-type commit-msg
 # Bootstrap the label set this repo's issues/skills rely on
 ./scripts/bootstrap-labels.sh
 ```
-````
 
 Then, in your GitHub repo settings, enable **required status checks** on
 `main` for the `CI` workflow (`commitlint`, `secret-scan`, `test`) —
@@ -791,15 +786,14 @@ local hooks can be bypassed with `--no-verify`):
   [gitleaks](https://github.com/gitleaks/gitleaks)).
 - Tests run in CI (`test` job — currently a placeholder until the
   scaffolding/CI sub-projects add real app code and test commands).
-
-````
+```
 
 - [ ] **Step 2: Commit**
 
 ```bash
 git add README.md
 git commit -m "docs: write README covering roadmap, skills, and setup"
-````
+```
 
 - [ ] **Step 3: Update the `ai-pipeline` epic and close it**
 
