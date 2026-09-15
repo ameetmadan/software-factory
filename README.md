@@ -33,6 +33,12 @@ See current status: `gh issue list --label epic --state all`.
 
 ## Setup (for a new clone or template use)
 
+Prerequisites: Go and Node.js installed (pre-commit builds the gitleaks and
+commitlint hooks from source), and the `gh` CLI installed and authenticated
+against this repo. If `pip install pre-commit` fails with an
+"externally-managed-environment" error, use `pipx install pre-commit` or
+`brew install pre-commit` instead.
+
 ```bash
 # Install and enable local guardrails
 pip install pre-commit

@@ -8,13 +8,20 @@ body:
       value: |
         One epic per software-factory piece: ai-pipeline, discovery,
         scaffolding, ci, iac, deploy. Link the design doc once
-        brainstorming produces one.
-  - type: input
+        brainstorming produces one. After filing, add the matching piece
+        label above (issue forms can't apply it automatically).
+  - type: dropdown
     id: piece
     attributes:
       label: Factory piece
       description: Which of the six pieces this covers
-      placeholder: "e.g. scaffolding"
+      options:
+        - ai-pipeline
+        - discovery
+        - scaffolding
+        - ci
+        - iac
+        - deploy
     validations:
       required: true
   - type: textarea

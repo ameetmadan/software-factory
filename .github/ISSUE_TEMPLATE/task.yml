@@ -3,6 +3,12 @@ description: A concrete unit of work under an epic
 title: ""
 labels: ["task"]
 body:
+  - type: markdown
+    attributes:
+      value: |
+        Remember to add the epic's piece label (`ai-pipeline`, `discovery`,
+        `scaffolding`, `ci`, `iac`, or `deploy`) alongside `task` — issue
+        forms can't apply it automatically.
   - type: input
     id: epic
     attributes:

@@ -475,7 +475,7 @@ Expected: the commit is rejected with a commitlint error (message doesn't match 
 Run:
 
 ```bash
-echo 'AWS_SECRET_ACCESS_KEY=AKIAABCDEFGHIJKLMNOP' > /tmp/leak-test.env
+echo 'AWS_SECRET_ACCESS_KEY=AKIAIOSFODNN7EXAMPLE' > /tmp/leak-test.env
 cp /tmp/leak-test.env leak-test.env
 git add leak-test.env
 git commit -m "test: planted secret"
