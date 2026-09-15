@@ -1,0 +1,33 @@
+name: Epic
+description: A top-level software-factory sub-project (roadmap item)
+title: "[Epic] "
+labels: ["epic"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        One epic per software-factory piece: ai-pipeline, discovery,
+        scaffolding, ci, iac, deploy. Link the design doc once
+        brainstorming produces one.
+  - type: input
+    id: piece
+    attributes:
+      label: Factory piece
+      description: Which of the six pieces this covers
+      placeholder: "e.g. scaffolding"
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: What's in and what's out for this piece
+    validations:
+      required: true
+  - type: input
+    id: spec
+    attributes:
+      label: Design doc path
+      description: Path under docs/superpowers/specs/ once written
+    validations:
+      required: false
