@@ -41,6 +41,20 @@ off the next piece's design cycle.
 - Don't implement ahead of an approved design for anything that isn't a
   trivial, obviously-scoped change.
 
+## Starting a new project idea
+
+Before any code or AI tooling exists for a new project, capture what it
+actually is and rank what to build first:
+
+- `discovery` skill — captures requirements (purpose, target users,
+  constraints, success criteria) into `docs/discovery/requirements.md`.
+- `prioritize-features` skill — RICE-scores a candidate feature list into
+  `docs/discovery/feature-backlog.md` and files each as a
+  `feature`-labeled GitHub issue.
+- Both skills fill in templates from `templates/discovery/` (also home to
+  an `adr.md` template for recording architectural decisions, per the
+  Documentation section below).
+
 ## Git workflow
 
 - Conventional commits: `feat:`, `fix:`, `docs:`, `refactor:` (and other
