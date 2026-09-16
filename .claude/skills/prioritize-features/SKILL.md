@@ -10,9 +10,9 @@ and files each as a trackable GitHub issue.
 
 ## RICE scoring
 
-~~~
+```
 Score = (Reach × Impact × Confidence) / Effort
-~~~
+```
 
 Each factor scored 1–10:
 
@@ -32,18 +32,24 @@ Each factor scored 1–10:
    `docs/discovery/feature-backlog.md` if it doesn't already exist, and
    write one row per feature, sorted by score descending, with rank
    assigned in that order.
-4. File each feature as a GitHub issue in the current repo:
+4. Ensure the `feature` label exists (idempotent, safe to re-run):
 
-~~~bash
+```bash
+gh label create feature --color 0e8a16 --description "New feature candidate scored via RICE" --force
+```
+
+5. File each feature as a GitHub issue in the current repo:
+
+```bash
 gh issue create \
   --title "<feature name>" \
   --label "feature" \
   --body "<one-line description>
 
 RICE: Reach=<R> Impact=<I> Confidence=<C> Effort=<E> Score=<S> Rank=<N>"
-~~~
+```
 
-5. Commit `docs/discovery/feature-backlog.md`.
+6. Commit `docs/discovery/feature-backlog.md`.
 
 ## Constraints
 

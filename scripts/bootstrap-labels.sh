@@ -13,6 +13,7 @@ labels=(
   "ci|c5def5|CI pipeline templates sub-project"
   "iac|bfd4f2|IaC modules sub-project"
   "deploy|d4c5f9|Deployment automation sub-project"
+  "feature|0e8a16|New feature candidate scored via RICE"
 )
 
 for entry in "${labels[@]}"; do

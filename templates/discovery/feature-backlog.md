@@ -5,7 +5,7 @@ RICE score = (Reach × Impact × Confidence) / Effort. Each factor is scored
 
 | Feature                 | Reach | Impact | Confidence | Effort | Score | Rank |
 | ----------------------- | ----- | ------ | ---------- | ------ | ----- | ---- |
-| <example: "CSV export"> | 7     | 6      | 8          | 3      | 11.2  | 1    |
+| <example: "CSV export"> | 7     | 6      | 8          | 3      | 112.0 | 1    |
 
 Each row above is also filed as a GitHub issue labeled `feature`, carrying
 the same breakdown in its body — this table is the human-readable summary,

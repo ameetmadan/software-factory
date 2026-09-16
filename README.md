@@ -30,6 +30,10 @@ See current status: `gh issue list --label epic --state all`.
 - `roadmap` — create/update GitHub issues for epics and tasks.
 - `new-subproject` — kick off the spec → plan cycle for the next factory
   piece.
+- `discovery` — capture requirements for a new project idea into
+  `docs/discovery/requirements.md`.
+- `prioritize-features` — RICE-score a candidate feature list into a
+  ranked backlog, filed as GitHub issues.
 
 ## Setup (for a new clone or template use)
 
