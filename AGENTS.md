@@ -77,6 +77,14 @@ Pin `@<commit-sha>` to a specific commit (not a branch) for supply-chain
 safety, matching the SHA-pinning convention used throughout this repo's
 own CI. `fullstack-app-template`'s `ci.yml` is the reference consumer.
 
+`node-version` (optional, default `"20"`) selects the Node version passed
+to `actions/setup-node`.
+
+Since this repo squash-merges feature branches, a commit SHA pinned while
+work is still on a feature branch will never land on `main` — the squash
+produces a new commit. Consumers must re-pin to a `main`-branch SHA once
+the branch's work is actually merged.
+
 ## Git workflow
 
 - Conventional commits: `feat:`, `fix:`, `docs:`, `refactor:` (and other
