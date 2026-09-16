@@ -60,6 +60,23 @@ is and rank what to build first:
   worked example (a small habit-tracking CLI) showing both skills'
   output.
 
+## Reusable CI pipeline
+
+`.github/workflows/ci-node.yml` is a GitHub reusable workflow
+(`workflow_call`) providing lint+test+build for a Node project — call
+it by reference instead of hand-rolling test/lint/build steps again:
+
+```yaml
+frontend-ci:
+  uses: ameetmadan/software-factory/.github/workflows/ci-node.yml@<commit-sha>
+  with:
+    working-directory: frontend
+```
+
+Pin `@<commit-sha>` to a specific commit (not a branch) for supply-chain
+safety, matching the SHA-pinning convention used throughout this repo's
+own CI. `fullstack-app-template`'s `ci.yml` is the reference consumer.
+
 ## Git workflow
 
 - Conventional commits: `feat:`, `fix:`, `docs:`, `refactor:` (and other
